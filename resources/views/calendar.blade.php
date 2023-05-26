@@ -17,10 +17,7 @@
 </head>
 <body>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-    </button>
+
 
     <!-- Modal -->
     <div class="modal fade" id="eventsModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -41,33 +38,9 @@
         </div>
     </div>
     </div>
-    Static backdrop 
-    When backdrop is set to static, the modal will not close when clicking outside of it. Click the button below to try it.
 
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Launch static backdrop modal
-    </button>
 
-    <!-- Modal -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-        <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            ...
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Understood</button>
-        </div>
-        </div>
-    </div>
-    </div>
 
     <div class="container">
         <div class="col-12">
@@ -115,13 +88,14 @@
                             dataType:'json',
                             data:{ title, start_date, end_date  },
                             success:function(response)
-                            {
-                                $('eventsModal').modal('hide');
+                            {              
+                                $('#eventsModal').modal('hide')
                                 $('#calendar').fullCalendar('renderEvent', {
                                     'title' : response.title,
                                     'start' : response.start_date,
                                     'end' : response.end_date
                                 })
+                                
                             },
                             error:function(error)
                             {
@@ -131,8 +105,63 @@
                             }
                         });
                     });
-                }
-            })
+                },
+                editable: true,
+                eventDrop: function(event){
+                    var id = event.id;
+                    var start_date = moment(event.start).format('YYYY-MM-DD');
+                    var end_date = moment(event.end).format('YYYY-MM-DD');
+
+                    $.ajax({
+                        url:"{{ route('calendar.update', '') }}" +'/'+ id,
+                        type:"PATCH",
+                        dataType:'json',
+                        data:{ start_date, end_date  },
+                        success:function(response)
+                        {
+                            swal("Event updated", " ", "success");
+                        },
+                        error:function(error)
+                        {
+                            console.log(error)
+                        }
+                    });
+                },
+                eventClick: function(event){
+                    var id = event.id;
+
+                    if(confirm('Remove event?')){
+                        $.ajax({
+                            url:"{{ route('calendar.destroy', '') }}" +'/'+ id,
+                            type:"DELETE",
+                            dataType:'json',
+                            success:function(response)
+                            {
+                                $('#calendar').fullCalendar('removeEvents', response)
+                                swal("Event deleted", " ", "success");
+                            },
+                            error:function(error)
+                            {
+                                console.log(error)
+                            }
+                        });
+                    }
+                },
+                selectAllow: function(event)
+                {
+                    return moment(event.start).utcOffset(false).isSame(moment(event.end).subtract(1, 'second').utcOffset(false), 'day');
+                },
+
+
+
+            });
+
+
+            $("#eventsModal").on("hidden.bs.modal", function () {
+                $('#saveBtn').unbind();
+            });
+
+            $('.fc-event').css('font-size', '14px');
         });
     </script>
 </body>

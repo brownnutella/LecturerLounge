@@ -31,5 +31,6 @@ Route::get('/profile{$user}', [App\Http\Controllers\ProfileController::class, 'i
 
 Route::get('calendar/index', [App\Http\Controllers\calendarController::class, 'index'])->name('calendar.index');
 Route::post('calendar', [App\Http\Controllers\calendarController::class, 'store'])->name('calendar.store');
-
+Route::patch('calendar/update/{id}', [App\Http\Controllers\calendarController::class, 'update'])->name('calendar.update');
+Route::delete('calendar/destroy/{id}', [App\Http\Controllers\calendarController::class, 'destroy'])->name('calendar.destroy');
 
