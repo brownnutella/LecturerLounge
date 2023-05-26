@@ -1,0 +1,87 @@
+body{
+    background-color: #B2D1EB;
+}
+.topheader{
+    background-color: #97B2C9;
+    top: 0;
+    left: 0;
+    position: fixed;
+    overflow:hidden;
+    width: 100%;
+    min-height: 10%;
+    color: #f2f2f2;
+    font-size: 17px;
+}
+.vectorheader{
+    float: left;
+}
+.vectorheader1{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    /*Don't ask why it works, i don't know either*/
+}
+.userlogo{
+    border: 1px solid #000000;
+}
+.userlogin{
+    border: 1px solid #000000;
+}
+.lectureloungetitle{
+    position: relative;
+    /* top: 25%; */
+    font-weight:900;
+    font-size: 250%;
+    text-align: center;
+    padding: 10% 0;
+    text-shadow: 2px 2px #b5b3b3;
+}
+.rcorners{
+    border-radius: 7%;
+    position: absolute;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 20%;
+    height: 65%;
+    bottom: -25%;
+    left: 25%;
+    text-align: center;
+}
+.rcorners2{
+    border-radius: 7%;
+    position: absolute;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 20%;
+    height: 65%;
+    bottom: -25%;
+    right: 25%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.midtext{
+    font-weight: 200;
+    font-size: larger;
+    color: black;
+}
+
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 5% 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #B2D1EB;
+}
+
+.styled:hover {
+    background-color: #B2D1EB;
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
