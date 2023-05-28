@@ -1,0 +1,122 @@
+body{
+    background-color: #B2D1EB;
+}
+.topheader{
+    background-color: #97B2C9;
+    top: 0;
+    left: 0;
+    position:fixed;
+    overflow:hidden;
+    width: 100%;
+    min-height: 10%;
+    color: #f2f2f2;
+}
+.vectorheader{
+    float: left;
+    /* border: 1px solid black; */
+}
+.vectorheader1{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*Don't ask why it works, i don't know either*/
+}
+.userlogo{
+    /* border: 1px solid #000000; */
+    position: relative;
+    right: 0%;
+    /* z-index: 2; */
+}
+/* .userlogin{
+    border: 1px solid #000000;
+} */
+
+.userlogin {
+    border: 0;
+    display:block;
+    padding:10px;
+    width: 100%;
+    font-size: 60%;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #E6EBB2;
+    position: relative;
+    margin: auto;
+}
+
+.userlogin:hover {
+    background-color: #E6EBB2;
+}
+
+.userlogin:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.lectureloungetitle{
+    position: fixed;
+    /* top: 25%; */
+    left: 25%;
+    right: 25%;
+    font-weight:900;
+    font-size: 250%;
+    text-align: center;
+    padding: 10% 0;
+    text-shadow: 2px 2px #b5b3b3;
+}
+.rcorners{
+    border-radius: 7%;
+    position: absolute;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 20%;
+    height: 65%;
+    bottom: -25%;
+    left: 25%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.rcorners2{
+    border-radius: 7%;
+    position: absolute;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 20%;
+    height: 65%;
+    bottom: -25%;
+    right: 25%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.midtext{
+    font-weight: 200;
+    font-size: larger;
+    color: black;
+}
+
+.styled {
+    border: 0;
+    margin: 0;
+    line-height: 200%;
+    width: 70%;
+    padding:10px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #B2D1EB;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+}
+.styled:hover {
+    background-color: #B2D1EB;
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
