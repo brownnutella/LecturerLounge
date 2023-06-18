@@ -2,6 +2,8 @@ body{
     background-color: #B2D1EB;
 }
 .topheader{
+    background-color: #97B2C9;
+
     top: 0;
     left: 0;
     position:fixed;
@@ -30,6 +32,22 @@ body{
 /* .userlogin{
     border: 1px solid #000000;
 } */
+.headercheat{
+    position: fixed;
+    left: 35%;
+    top: 7%;
+    width: 40%;
+}
+
+.headerthings:link{
+    margin: 5%;  
+    color:black;
+    text-decoration: none;
+    font-size: larger;
+}
+.headerthings:hover{
+    text-decoration: underline;
+}
 
 .userlogin {
     border: 0;
@@ -40,13 +58,13 @@ body{
     text-align: center;
     color: #fff;
     border-radius: 10px;
-    background-color: #E6EBB2;
+    background-color: #EC7D7D;
     position: relative;
     margin: auto;
 }
 
 .userlogin:hover {
-    background-color: #E6EBB2;
+    background-color: #f74f29;
 }
 
 .userlogin:active {
@@ -54,31 +72,38 @@ body{
 }
 
 .lectureloungetitle{
-    position: absolute;
-    top: 2%;
+    position: fixed;
+    /* top: 25%; */
     left: 25%;
     right: 25%;
     font-weight:900;
     font-size: 250%;
     text-align: center;
     padding: 10% 0;
-    /* text-shadow: 2px 2px #b5b3b3; */
+    text-shadow: 2px 2px #b5b3b3;
 }
 .rcorners{
-    border-radius: 40px;
+    border-radius: 20px;
     position: absolute;
     background-color: #f2f2f2;
     padding: 20px;
-    width: 40%;
-    height: 50%;
-    bottom: 5%;
-    left: 29%;
+    width: 70%;
+    height: 25%;
+    left: 5%;
+    top: 25%;
     text-align: center;
-    display: flex;
-    flex-direction: column;
 }
-
-
+.rcorners2{
+    border-radius: 20px;
+    position: absolute;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 70%;
+    height: 25%;
+    left: 5%;
+    top: 65%;
+    text-align: center;
+}
 .midtext{
     font-weight: 200;
     font-size: larger;
@@ -90,15 +115,16 @@ body{
     margin: 0;
     line-height: 200%;
     width: 30%;
+    height: 40%;
     padding:10px;
     font-size: 1rem;
     text-align: center;
     color: #fff;
     border-radius: 10px;
     background-color: #B2D1EB;
-    position: relative;
-    /* top: 40%; */
-    left: 34%;
+    position: absolute;
+    right: 5%;
+    margin-top: 4%;
 }
 .styled:hover {
     background-color: #B2D1EB;
@@ -106,22 +132,4 @@ body{
 
 .styled:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
-}
-input[type=text], input[type=password] {   
-    width: 60%;
-    height: fit-content;
-    margin: 8px 0;  
-    padding: 12px 20px;   
-    display: inline-block;   
-    box-sizing: border-box;
-    border: 0;
-    border-radius: 10px;
-    position: relative;
-    left: 10%;
-}  
-.redirectto{
-    position: absolute;
-    bottom: 10%;
-    left: 20%;
-    right: 20%;
 }
