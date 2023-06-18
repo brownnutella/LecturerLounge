@@ -1,0 +1,193 @@
+body{
+    background-color: #B2D1EB;
+}
+.topheader{
+    background-color: #97B2C9;
+
+    top: 0;
+    left: 0;
+    position:fixed;
+    overflow:hidden;
+    width: 100%;
+    min-height: 10%;
+    color: #f2f2f2;
+}
+.vectorheader{
+    float: left;
+    /* border: 1px solid black; */
+}
+.vectorheader1{
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*Don't ask why it works, i don't know either*/
+}
+.userlogo{
+    /* border: 1px solid #000000; */
+    position: relative;
+    right: 0%;
+    /* z-index: 2; */
+}
+/* .userlogin{
+    border: 1px solid #000000;
+} */
+.headercheat{
+    position: fixed;
+    left: 35%;
+    top: 7%;
+    width: 55%;
+}
+
+.headerthings:link{
+    margin: 5%;  
+    color:black;
+    text-decoration: none;
+    font-size: larger;
+}
+.headerthings:hover{
+    text-decoration: underline;
+}
+
+.userlogin {
+    border: 0;
+    display:block;
+    padding:10px;
+    width: 100%;
+    font-size: 60%;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #EC7D7D;
+    position: relative;
+    margin: auto;
+}
+
+.userlogin:hover {
+    background-color: #f74f29;
+}
+
+.userlogin:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.lectureloungetitle{
+    position: fixed;
+    /* top: 25%; */
+    left: 25%;
+    right: 25%;
+    font-weight:900;
+    font-size: 250%;
+    text-align: center;
+    padding: 10% 0;
+    text-shadow: 2px 2px #b5b3b3;
+}
+.rcorners{
+    border-radius: 20px;
+    position: absolute;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 90%;
+    height: 100%;
+    left: 5%;
+    top: 25%;
+    text-align: center;
+}
+.midtext{
+    font-weight: 200;
+    font-size: larger;
+    color: black;
+}
+
+.styled {
+    border: 0;
+    margin: 0;
+    line-height: 200%;
+    width: 15%;
+    height: 8%;
+    padding:10px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #E6EBB2;;
+    position: absolute;
+    right: 5%;
+    bottom: 2%;
+}
+.styled:hover {
+    background-color: #E6EBB2;;
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.bluebutton {
+    border: 0;
+    margin: 0;
+    line-height: 200%;
+    width: 50%;
+    height: 10%;
+    padding:10px;
+    font-size: medium;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #B2D1EB;
+    position: absolute;
+    left: 26%;
+    bottom: 13%;
+}
+.bluebutton:hover {
+    background-color: #B2D1EB;
+}
+
+.bluebutton:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.bluebutton2 {
+    border: 0;
+    margin: 0;
+    line-height: 200%;
+    width: 50%;
+    height: 10%;
+    padding:10px;
+    font-size: medium;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background-color: #B2D1EB;
+    position: absolute;
+    left: 26%;
+    bottom: 1%;
+}
+.bluebutton2:hover {
+    background-color: #B2D1EB;
+}
+
+.bluebutton2:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+input[type=texting]{
+    width: 40%;
+    height: 8%;
+    margin: 8px 0;  
+    padding: 12px 20px;   
+    display: inline-block;   
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 10px;
+    position: absolute;
+    right: 22%;
+    border-radius: 20px;
+    bottom: 2%;
+}
+.kato{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-top: 10%;
+}
